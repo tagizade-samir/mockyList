@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSelector } from 'react-redux';
 import MainModal from '../../components/mainModal';
 import UserItemCard from '../../components/userItem';
@@ -33,7 +34,7 @@ const MainScreen: React.FC<MainScreenProps> = props => {
 	}, [data, sort]);
 
 	return (
-		<View style={{ alignItems: 'center' }}>
+		<SafeAreaView style={{ alignItems: 'center', flex: 1 }}>
 			<View style={styles.buttons_containers}>
 				<Pressable style={styles.button} onPress={showModal}>
 					<Text>Sort by</Text>
@@ -44,8 +45,11 @@ const MainScreen: React.FC<MainScreenProps> = props => {
 				contentContainerStyle={styles.content_container}>
 				{data?.length ? sortedContent : <Text>EMPTY YET</Text>}
 			</ScrollView>
-			<MainModal isShown={isShown} setIsModalShown={setIsModalShown} />
-		</View>
+			<MainModal
+				isShown={isShown}
+				setIsModalShown={setIsModalShown}
+			/>
+		</SafeAreaView>
 	);
 };
 
