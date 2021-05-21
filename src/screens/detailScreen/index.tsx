@@ -13,7 +13,7 @@ import { useSelector } from 'react-redux';
 import UserIcon from '../../assets/svg/userIcon';
 import MainHeader from '../../components/mainHeader';
 import { selectUser } from '../../modules/redux/users/selectors';
-import { getColorByRating, getDate } from '../../services/UI';
+import { getColorByRating, getDate, onPressLinking } from '../../services/UI';
 import { getStyles } from './styles';
 
 interface DetailScreenProps {}
@@ -27,9 +27,6 @@ const DetailScreen: React.FC<DetailScreenProps> = props => {
 	const date = new Date(parseInt(currentUser?.work.start_date));
 	const emailUrl = `mailto:${currentUser?.email}`;
 	const phoneUrl = `tel:${currentUser?.phone_number}`;
-	const onPressLinking = (url: string): void => {
-		Linking.canOpenURL(url) && Linking.openURL(url);
-	};
 
 	return (
 		<SafeAreaView style={{flex: 1}}>

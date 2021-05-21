@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-const MainTab: React.FC<{}> = () => {
+const MainStack: React.FC<{}> = () => {
     return(
         <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name={Utils.ROUTES.MAIN_SCREEN} component={MainScreen} />
@@ -15,4 +15,4 @@ const MainTab: React.FC<{}> = () => {
     )
 };
 
-export default MainTab;
+export default MainStack;

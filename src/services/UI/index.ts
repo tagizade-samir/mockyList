@@ -1,3 +1,4 @@
+import { Linking } from 'react-native';
 import Utils from '../../utils';
 
 export const getColorByRating = (rating: number) => {
@@ -31,5 +32,11 @@ export const getDate = (date: Date): string => {
 };
 
 const checkDateNumber = (dateNumber: number): string => {
+	// Check if i need to add 0 in the beginning
 	return dateNumber < 10 ? `0${dateNumber}` : `${dateNumber}`;
+};
+
+export const onPressLinking = (url: string): void => {
+	// Used for email and phone linking
+	Linking.canOpenURL(url) && Linking.openURL(url);
 };

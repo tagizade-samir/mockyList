@@ -27,6 +27,7 @@ const UserItemCard: React.FC<UserItemProps> = ({
 	return (
 		<Pressable
 			onPress={() =>
+				// Go to detail screen and send selected user's id
 				navigation.navigate(Utils.ROUTES.DETAIL_SCREEN, { id })
 			}
 			style={[
