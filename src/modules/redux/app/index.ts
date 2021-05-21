@@ -1,9 +1,10 @@
-import { CommonAction } from "../types";
-import { ActionTypes, AppReducer } from "./types";
+import { CommonAction } from '../types';
+import { ActionTypes, AppReducer } from './types';
 
 const initialState: AppReducer = {
 	isSplashShown: true,
 	currentUserId: null,
+	sort: 'none',
 };
 
 const appReducer = (state: AppReducer = initialState, action: CommonAction) => {
@@ -18,6 +19,11 @@ const appReducer = (state: AppReducer = initialState, action: CommonAction) => {
 			return {
 				...state,
 				currentUserId: payload,
+			};
+		case ActionTypes.SET_SORT:
+			return {
+				...state,
+				sort: payload,
 			};
 		default:
 			return state;

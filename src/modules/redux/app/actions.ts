@@ -24,3 +24,15 @@ export const setCurrentUserId = (payload: number): SetCurrentUserIdInt & CommonA
 		payload,
 	};
 };
+
+interface SetSortInt {
+	type: string;
+	payload: string;
+}
+
+export const setSort = (payload: string): SetSortInt & CommonAction => {
+	return {
+		type: ActionTypes.SET_SORT,
+		payload,
+	};
+};

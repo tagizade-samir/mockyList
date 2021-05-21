@@ -1,7 +1,7 @@
 export const COLORS = {
-	rating_lowest: '#FFADAD',
-	rating_low: '#FFD6A5',
-	rating_medium: '#FDFFB6',
-	rating_high: '#9BF6FF',
-	rating_highest: '#CAFFBF',
+	rating_lowest: '#ce282b',
+	rating_low: '#f8961e',
+	rating_medium: '#f9c74f',
+	rating_high: '#aacc00',
+	rating_highest: '#2b9348',
 };

@@ -27,16 +27,17 @@ export const getStyles = () => {
 		},
 		work: {
 			fontSize: 16,
+			fontStyle: 'italic',
 		},
 		description: {
 			fontSize: 16,
-			color: 'gray',
+			color: 'black',
 		},
 		separator: {
 			width: '95%',
 			alignSelf: 'center',
 			height: 1,
-			backgroundColor: 'gray',
+			backgroundColor: 'black',
 			marginVertical: 25,
 		},
 		info_container: {

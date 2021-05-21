@@ -7,7 +7,9 @@ import { getColorByRating } from '../../services/UI';
 import Utils from '../../utils';
 import { getStyles } from './styles';
 
-interface UserItemProps extends UserItem {}
+interface UserItemProps extends UserItem {
+	index: number;
+}
 
 const UserItemCard: React.FC<UserItemProps> = ({
 	full_name,
@@ -17,8 +19,9 @@ const UserItemCard: React.FC<UserItemProps> = ({
 	status,
 	address: { city, country },
     id,
+	index,
 }) => {
-	const styles = useMemo(() => getStyles(), []);
+	const styles = useMemo(() => getStyles(index), [index]);
     const navigation = useNavigation();
 
 	return (

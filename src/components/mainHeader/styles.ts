@@ -21,7 +21,8 @@ export const getStyles = () => {
 			fontWeight: 'bold',
 		},
 		username: {
-			color: 'gray',
+			color: 'black',
+			textDecorationLine: 'underline',
 		},
 		rating: {
 			fontSize: 34,
