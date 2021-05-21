@@ -11,7 +11,7 @@ const BackIcon: React.FC<BackIconProps> = ({ width, height, color }) => {
 	return (
 		<Svg
 			width={width || 40}
-			height={height ||  40}
+			height={height || 40}
 			fill={color || '#000'}
 			x="0"
 			y="0"

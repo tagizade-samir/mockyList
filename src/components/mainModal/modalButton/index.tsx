@@ -10,14 +10,16 @@ interface ModalButtonProps {
 }
 
 const ModalButton: React.FC<ModalButtonProps> = ({ text, setIsModalShown }) => {
-    const styles = useMemo(() => getStyles(), []);
-    const dispatch = useDispatch();
+	const styles = useMemo(() => getStyles(), []);
+	const dispatch = useDispatch();
 
 	return (
-		<Pressable style={styles.container} onPress={() => {
-			setIsModalShown(false);
-            dispatch(setSort(text));
-        }}>
+		<Pressable
+			style={styles.container}
+			onPress={() => {
+				setIsModalShown(false);
+				dispatch(setSort(text));
+			}}>
 			<Text style={styles.text}>{text}</Text>
 		</Pressable>
 	);

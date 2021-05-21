@@ -9,7 +9,6 @@ interface RootNavigationProps {}
 
 const RootNavigation: React.FC<{}> = () => {
 	const isSplashShown = useSelector(selectIsSplashShown);
-	console.log(`isSplashShown`, isSplashShown)
 
 	return (
 		<>

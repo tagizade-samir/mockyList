@@ -35,9 +35,7 @@ const MainScreen: React.FC<MainScreenProps> = props => {
 	return (
 		<View style={{ alignItems: 'center' }}>
 			<View style={styles.buttons_containers}>
-				<Pressable
-					style={styles.button}
-					onPress={showModal}>
+				<Pressable style={styles.button} onPress={showModal}>
 					<Text>Sort by</Text>
 				</Pressable>
 			</View>
@@ -46,10 +44,7 @@ const MainScreen: React.FC<MainScreenProps> = props => {
 				contentContainerStyle={styles.content_container}>
 				{data?.length ? sortedContent : <Text>EMPTY YET</Text>}
 			</ScrollView>
-			<MainModal
-				isShown={isShown}
-				setIsModalShown={setIsModalShown}
-			/>
+			<MainModal isShown={isShown} setIsModalShown={setIsModalShown} />
 		</View>
 	);
 };

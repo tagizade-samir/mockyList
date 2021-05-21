@@ -6,7 +6,9 @@ interface SetIsSplashShownInt {
 	payload: boolean;
 }
 
-export const setIsSplashShown = (payload: boolean): SetIsSplashShownInt & CommonAction => {
+export const setIsSplashShown = (
+	payload: boolean,
+): SetIsSplashShownInt & CommonAction => {
 	return {
 		type: ActionTypes.SET_IS_SPLASH_SHOWN,
 		payload,
@@ -18,7 +20,9 @@ interface SetCurrentUserIdInt {
 	payload: number;
 }
 
-export const setCurrentUserId = (payload: number): SetCurrentUserIdInt & CommonAction => {
+export const setCurrentUserId = (
+	payload: number,
+): SetCurrentUserIdInt & CommonAction => {
 	return {
 		type: ActionTypes.SET_IS_SPLASH_SHOWN,
 		payload,

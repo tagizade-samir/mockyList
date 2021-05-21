@@ -18,15 +18,17 @@ const UserItemCard: React.FC<UserItemProps> = ({
 	username,
 	status,
 	address: { city, country },
-    id,
+	id,
 	index,
 }) => {
 	const styles = useMemo(() => getStyles(index), [index]);
-    const navigation = useNavigation();
+	const navigation = useNavigation();
 
 	return (
 		<Pressable
-            onPress={() => navigation.navigate(Utils.ROUTES.DETAIL_SCREEN, { id })}
+			onPress={() =>
+				navigation.navigate(Utils.ROUTES.DETAIL_SCREEN, { id })
+			}
 			style={[
 				styles.container,
 				{ backgroundColor: getColorByRating(rating) },
@@ -40,7 +42,12 @@ const UserItemCard: React.FC<UserItemProps> = ({
 				<View style={styles.name_container}>
 					<Text style={styles.full_name}>{full_name}</Text>
 					<Text style={styles.username}>@{username}</Text>
-					<Text ellipsizeMode={'tail'} numberOfLines={1} style={styles.status}>{status}</Text>
+					<Text
+						ellipsizeMode={'tail'}
+						numberOfLines={1}
+						style={styles.status}>
+						{status}
+					</Text>
 				</View>
 			</View>
 			<View style={styles.bottom_part}>

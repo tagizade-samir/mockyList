@@ -9,10 +9,7 @@ interface MainModalProps {
 	setIsModalShown: Function;
 }
 
-const MainModal: React.FC<MainModalProps> = ({
-	isShown,
-	setIsModalShown,
-}) => {
+const MainModal: React.FC<MainModalProps> = ({ isShown, setIsModalShown }) => {
 	const styles = useMemo(() => getStyles(), []);
 
 	return (
@@ -23,8 +20,14 @@ const MainModal: React.FC<MainModalProps> = ({
 				<View style={styles.container}>
 					<>
 						<Text style={styles.header}>Sort by: </Text>
-                        <ModalButton text={'Rating from high to low'} setIsModalShown={setIsModalShown} />
-                        <ModalButton text={'Rating from low to high'} setIsModalShown={setIsModalShown} />
+						<ModalButton
+							text={'Rating from high to low'}
+							setIsModalShown={setIsModalShown}
+						/>
+						<ModalButton
+							text={'Rating from low to high'}
+							setIsModalShown={setIsModalShown}
+						/>
 					</>
 					<Pressable onPress={() => setIsModalShown(false)}>
 						<Text style={styles.cancel_button}>Cancel</Text>

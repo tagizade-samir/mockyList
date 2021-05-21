@@ -25,7 +25,7 @@ const DetailScreen: React.FC<DetailScreenProps> = props => {
 	const styles = useMemo(() => getStyles(), []);
 	const date = new Date(parseInt(currentUser?.work.start_date));
 	const emailUrl = `mailto:${currentUser?.email}`;
-    const phoneUrl = `tel:${currentUser?.phone_number}`;
+	const phoneUrl = `tel:${currentUser?.phone_number}`;
 	const onPressLinking = (url: string): void => {
 		Linking.canOpenURL(url) && Linking.openURL(url);
 	};
@@ -67,15 +67,19 @@ const DetailScreen: React.FC<DetailScreenProps> = props => {
 					<View style={styles.info_row}>
 						<Text>Email: </Text>
 						<Pressable onPress={() => onPressLinking(emailUrl)}>
-							<Text style={styles.info_row_text}>{currentUser?.email}</Text>
+							<Text style={styles.info_row_text}>
+								{currentUser?.email}
+							</Text>
 						</Pressable>
 					</View>
-                    <View style={styles.info_row}>
-					    <Text>Phone: </Text>
-                        <Pressable onPress={() => onPressLinking(phoneUrl)}>
-                            <Text style={styles.info_row_text}>{currentUser?.phone_number}</Text>
-                        </Pressable>
-                    </View>
+					<View style={styles.info_row}>
+						<Text>Phone: </Text>
+						<Pressable onPress={() => onPressLinking(phoneUrl)}>
+							<Text style={styles.info_row_text}>
+								{currentUser?.phone_number}
+							</Text>
+						</Pressable>
+					</View>
 					<Text>
 						{currentUser?.address.country},{' '}
 						{currentUser?.address.city} city

@@ -1,5 +1,5 @@
-import { AppReducer } from "./app/types";
-import { UsersReducer } from "./users/types";
+import { AppReducer } from './app/types';
+import { UsersReducer } from './users/types';
 
 export interface AppStore {
 	app: AppReducer;

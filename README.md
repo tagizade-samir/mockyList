@@ -16,6 +16,7 @@ Main technologies used in this project:
 * react-native: 0.64.1
 * redux: 4.1.0
 * redux-saga: 1.1.3
+* JavaScript, TypeScript
 	
 ## Setup
 To run this project, install it locally using npm:

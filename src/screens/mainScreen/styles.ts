@@ -3,7 +3,9 @@ import { Dimensions, StatusBar, StyleSheet } from 'react-native';
 export const getStyles = () => {
 	return StyleSheet.create({
 		container: {
-			height: Dimensions.get('window').height - Number(StatusBar?.currentHeight),
+			height:
+				Dimensions.get('window').height -
+				Number(StatusBar?.currentHeight),
 		},
 		content_container: {
 			paddingHorizontal: 10,
@@ -28,6 +30,6 @@ export const getStyles = () => {
 			width: '100%',
 			justifyContent: 'center',
 			alignItems: 'center',
-		}
+		},
 	});
 };

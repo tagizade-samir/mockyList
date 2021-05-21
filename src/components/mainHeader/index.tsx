@@ -7,14 +7,14 @@ interface MainHeaderProps {
 	fullname: string;
 	username: string;
 	rating: number;
-    onPress: (event: GestureResponderEvent) => void;
+	onPress: (event: GestureResponderEvent) => void;
 }
 
 const MainHeader: React.FC<MainHeaderProps> = ({
 	fullname,
 	username,
 	rating,
-    onPress,
+	onPress,
 }) => {
 	const styles = useMemo(() => getStyles(), []);
 	const [pressColor, setPressColor] = useState('#000');
@@ -22,7 +22,7 @@ const MainHeader: React.FC<MainHeaderProps> = ({
 	return (
 		<View style={styles.container}>
 			<Pressable
-                onPress={onPress}
+				onPress={onPress}
 				onPressIn={() => setPressColor('gray')}
 				onPressOut={() => setPressColor('#000')}
 				style={styles.button_container}>
