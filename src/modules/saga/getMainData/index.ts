@@ -4,7 +4,7 @@ import Utils from '../../../utils';
 import { setUsersData } from '../../redux/users/actions';
 import { ActionTypes } from './types';
 
-function* workerGetMainData({ type, payload }) {
+function* workerGetMainData() {
     try {
         const response = yield call(axiosGet, Utils.MAIN_URL);
         if (response?.data?.length) {

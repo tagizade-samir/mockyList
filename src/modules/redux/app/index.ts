@@ -1,20 +1,23 @@
-import { ActionTypes } from "./types";
+import { CommonAction } from "../types";
+import { ActionTypes, AppReducer } from "./types";
 
-interface InitialState {
-	isSplashShown: boolean;
-}
-
-const initialState = {
+const initialState: AppReducer = {
 	isSplashShown: true,
+	currentUserId: null,
 };
 
-const appReducer = (state: InitialState = initialState, action) => {
+const appReducer = (state: AppReducer = initialState, action: CommonAction) => {
 	const { payload, type } = action;
 	switch (type) {
 		case ActionTypes.SET_IS_SPLASH_SHOWN:
 			return {
 				...state,
 				isSplashShown: payload,
+			};
+		case ActionTypes.SET_CURRENT_USER_ID:
+			return {
+				...state,
+				currentUserId: payload,
 			};
 		default:
 			return state;

@@ -1,14 +1,11 @@
-import { ActionTypes } from "./types";
+import { CommonAction } from "../types";
+import { ActionTypes, UsersReducer } from "./types";
 
-interface InitialState {
-	data: Array<any>;
-}
-
-const initialState = {
+const initialState: UsersReducer = {
 	data: [],
 };
 
-const usersReducer = (state: InitialState = initialState, action) => {
+const usersReducer = (state: UsersReducer = initialState, action: CommonAction) => {
 	const { payload, type } = action;
 	switch (type) {
 		case ActionTypes.SET_USERS_DATA:

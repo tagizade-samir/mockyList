@@ -1,3 +1,4 @@
+import { CommonAction } from '../types';
 import { ActionTypes } from './types';
 
 interface SetUsersDataInt {
@@ -5,7 +6,7 @@ interface SetUsersDataInt {
 	payload: Array<any>;
 }
 
-export const setUsersData = (payload: Array<any>): SetUsersDataInt => {
+export const setUsersData = (payload: Array<any>): SetUsersDataInt & CommonAction => {
 	return {
 		type: ActionTypes.SET_USERS_DATA,
 		payload,
