@@ -31,5 +31,10 @@ export const getStyles = () => {
 			justifyContent: 'center',
 			alignItems: 'center',
 		},
+		empty_text: {
+			textAlign: 'center',
+			fontSize: 30,
+			fontWeight: 'bold',
+		},
 	});
 };

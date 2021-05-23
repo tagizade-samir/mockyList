@@ -43,7 +43,7 @@ const MainScreen: React.FC<MainScreenProps> = props => {
 			<ScrollView
 				style={styles.container}
 				contentContainerStyle={styles.content_container}>
-				{data?.length ? sortedContent : <Text>EMPTY YET</Text>}
+				{data?.length ? sortedContent : <Text style={styles.empty_text}>EMPTY YET</Text>}
 			</ScrollView>
 			<MainModal
 				isShown={isShown}
